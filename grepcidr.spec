@@ -6,6 +6,9 @@ License:	GPL v2
 Group:		Applications/Text
 Source0:	http://www.pc-tools.net/files/unix/%{name}-%{version}.tar.gz
 # Source0-md5:	7ccade25ce9fe6d6a02348ba8e4cf4a3
+Patch0:		makefile.diff
+Patch1:		find-anywhere.diff
+Patch2:		regex.diff
 URL:		http://www.pc-tools.net/unix/grepcidr/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -14,6 +17,9 @@ Filter IP addresses matching IPv4 CIDR/network specification.
 
 %prep
 %setup -q
+%patch0 -p1
+%patch1 -p0
+%patch2 -p0
 
 %build
 %{__make} CFLAGS="%{rpmcflags}"
