@@ -25,6 +25,7 @@ Filter IP addresses matching IPv4 CIDR/network specification.
 %{__make} CFLAGS="%{rpmcflags}"
 
 %install
+rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
