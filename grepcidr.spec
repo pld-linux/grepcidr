@@ -1,7 +1,7 @@
 Summary:	IP addresses grep
 Name:		grepcidr
 Version:	2.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/Text
 Source0:	http://www.pc-tools.net/files/unix/%{name}-%{version}.tar.gz
